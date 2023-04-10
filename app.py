@@ -13,7 +13,7 @@ db = SQLAlchemy(app)
 def create_app():
     app = Flask(__name__)
 
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:archit2001@localhost/mydatabase'
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://<username>:<password>@localhost/<mydatabase>'
 
     db.init_app(app)
 
