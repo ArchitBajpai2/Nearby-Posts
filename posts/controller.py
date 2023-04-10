@@ -3,11 +3,11 @@ from .models import Post
 from sqlalchemy.sql import text
 from sqlalchemy import func
 
-
 class PostController:
     @staticmethod
     def create_post(title, content):
         post = Post(title=title, content=content,lat=lat, lon=lon)
+
         db.session.add(post)
         db.session.commit()
 
