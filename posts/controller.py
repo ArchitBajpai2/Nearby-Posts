@@ -5,9 +5,8 @@ from sqlalchemy import func
 
 class PostController:
     @staticmethod
-    def create_post(title, content):
-        post = Post(title=title, content=content,lat=lat, lon=lon)
-
+    def create_post(text, location):
+        post = Post(text=text, location=location ,lat=lat, lon=lon)
         db.session.add(post)
         db.session.commit()
 
